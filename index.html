@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="utf-8">
+    <title>Kendra Mills | Photographer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="gallery.html">
+    
+    <style>
+ .imageoverlap{
+  
+  position: absolute;
+  top: 400px;
+  left: 750px;
+ }
+  </style>
+  
+  <div id="button">
+  <div class="imageoverlap">
+  <a href="gallery.html" class="button">Kendra Mills</a>
+  </div>
+   
+  <body>
+  <div class="slideshow" data-slide-type="cover-page">
+  <img class="mySlides" src="img/city.JPG" style="height: 860px; width: 1900px">
+  <img class="mySlides" src="img/woods.jpg" style="height: 860px; width: 1900px">
+  <img class="mySlides" src="img/main.jpg" style="height: 860px; width: 1900px">
+  <img class="mySlides" src="img/sunset.JPG" style="height: 860px; width: 1900px">
+</div>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</head>
+  </html>
